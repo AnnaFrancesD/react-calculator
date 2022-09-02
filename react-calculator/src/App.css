@@ -45,10 +45,12 @@ button {
 
 .wide-button {
   grid-column: span 2;
+  background-color: #fcf6bd;
 }
 
 .op-button {
   border-radius: 50px;
+  background-color: lightpink
 }
 
 .display {
