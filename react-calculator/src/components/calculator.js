@@ -40,31 +40,55 @@ export default function Calculator() {
   return (
     <div className="calculator">
       <div className="display">
-        <div className="prev-figure">{result ? result : ""}</div>
-        <div className="curr-figure">{calc || "0"}</div>
+        <div className="result">{result ? result : "0"}</div>
+        <div className="calc">{calc || "0"}</div>
       </div>
-      <button className="width-two" onClick={clear}>
+      <button className="wide-button" onClick={clear}>
         AC
       </button>
-      <button className="width-two" onClick={deleteNum}>
+      <button className="wide-button" onClick={deleteNum}>
         DEL
       </button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>1</button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>2</button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>3</button>
-      <button onClick={(e) => handleClick(e.target.innerHTML)}>÷</button>
+      <button className="op-button" onClick={() => handleClick("/")}>
+        ÷
+      </button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>4</button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>5</button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>6</button>
-      <button onClick={(e) => handleClick(e.target.innerHTML)}>*</button>
+      <button
+        className="op-button"
+        onClick={(e) => handleClick(e.target.innerHTML)}
+      >
+        *
+      </button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>7</button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>8</button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>9</button>
-      <button onClick={(e) => handleClick(e.target.innerHTML)}>+</button>
-      <button onClick={(e) => handleClick(e.target.innerHTML)}>.</button>
+      <button
+        className="op-button"
+        onClick={(e) => handleClick(e.target.innerHTML)}
+      >
+        +
+      </button>
+      <button
+        className="op-button"
+        onClick={(e) => handleClick(e.target.innerHTML)}
+      >
+        .
+      </button>
       <button onClick={(e) => handleClick(e.target.innerHTML)}>0</button>
-      <button onClick={equals}>=</button>
-      <button onClick={(e) => handleClick(e.target.innerHTML)}>-</button>
+      <button className="op-button" onClick={equals}>
+        =
+      </button>
+      <button
+        className="op-button"
+        onClick={(e) => handleClick(e.target.innerHTML)}
+      >
+        -
+      </button>
     </div>
   );
 }
